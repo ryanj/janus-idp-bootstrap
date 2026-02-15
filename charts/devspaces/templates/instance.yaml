@@ -7,14 +7,15 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   devEnvironments:
+    disableContainerRunCapabilities: false
     defaultEditor: che-incubator/che-code/latest
     defaultNamespace:
       template: <username>-devspaces
     secondsOfInactivityBeforeIdling: -1
     secondsOfRunBeforeIdling: -1
-    maxNumberOfRunningWorkspacesPerUser: 3
+    maxNumberOfRunningWorkspacesPerUser: 2
     storage:
-      pvcStrategy: per-workspace
+      pvcStrategy: per-user
   components:
     cheServer:
       debug: false
