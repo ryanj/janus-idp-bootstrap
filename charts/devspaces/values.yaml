@@ -5,10 +5,10 @@ oauth:
 devSpaces:
   operator:
     catalogSource:
-      enabled: false
-      name: redhat-operators
-      image: registry.redhat.io/redhat/redhat-operator-index
-      tag: v4.14
+      enabled: true
+      name: redhat-operators-devspaces-snap
+      image: quay.io/gpte-devops-automation/olm_snapshot_redhat_catalog
+      tag: v4.20_2026_02_11
       namespace: openshift-marketplace
     namespace: openshift-operators
     channel: stable
