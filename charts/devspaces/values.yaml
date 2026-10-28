@@ -5,11 +5,11 @@ oauth:
 devSpaces:
   operator:
     catalogSource:
-      enabled: true
+      enabled: false
       name: redhat-operators-devspaces-snap
       image: quay.io/gpte-devops-automation/olm_snapshot_redhat_catalog
       tag: v4.20_2026_02_11
       namespace: openshift-marketplace
     namespace: openshift-operators
-    channel: stable
+    channel: fast
     startingCSV: ""
